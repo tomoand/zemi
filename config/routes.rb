@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth',controllers: {
                                 registrations: "auth/registrations"
                               }
+  get '/', to: 'abstracts#index'
   get 'chats/add', to: 'chats#add'
   resources :chats
   get 'pdfs/add', to: 'pdfs#add'

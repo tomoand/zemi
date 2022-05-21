@@ -26,7 +26,7 @@ module Zemi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
-    config.x.cors_allowed_origins = ENV.fetch('CORS_ALLOWED_ORIGINS', 'localhost:3000')
+    config.x.cors_allowed_origins = ENV.fetch('CORS_ALLOWED_ORIGINS', 'https://tomoand.github.io/react_zemi')
     config.action_cable.mount_path = '/websocket'
   end
 end
